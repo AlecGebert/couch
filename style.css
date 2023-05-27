@@ -1,0 +1,749 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "Roboto", serif;
+}
+
+.container {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Hamburger */
+
+.hamburger-menu {
+    width: 4rem;
+    height: 4rem;
+    padding: 0 1rem;
+    border-radius: 50%;
+    background: #a7a7a7;
+    position: fixed;
+    top: 5rem;
+    right: 5rem;
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+    transition: right 0.7s;
+    /* visibility: hidden; */
+}
+
+.change .hamburger-menu {
+    right: 33rem;
+}
+
+.line {
+    width: 100%;
+    height: 0.3rem;
+    background-color: #fff;
+    box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
+}
+
+.change .line {
+    background-color: #fff;
+    margin-left: 0.5rem;
+}
+
+.change .line-1 {
+    transform: rotate(45deg) translate(0.3rem, 1.15rem);
+    margin-left: 0.5rem;
+}
+
+.change .line-2 {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.change .line-3 {
+    transform: rotate(-45deg) translate(0.3rem, -1.15rem);
+}
+
+
+.hamburger-menu span {
+    position: absolute;
+    left: 5rem;
+    width: 12rem;
+    height: 5rem;
+    background-color: #9fa1a3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #777;
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s;
+}
+
+.change .hamburger-menu:hover span {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hamburger-menu span::before {
+    content: "";
+    position: absolute;
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid #9fa1a3;
+    border-bottom: 1rem solid transparent;
+    border-top: 1rem solid transparent;
+    top: 50%;
+    left: -2rem;
+    transform: translateY(-50%);
+}
+
+
+
+/* Hamburger End*/
+
+/* Sidebar */
+
+.sidebar {
+    width: 40rem;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -40rem;
+    transition: right 0.5s;
+    z-index: 100;
+    background: url(./images/1614379570_12-p-svetlii-biznes-fon-13.jpg);
+}
+
+.change .sidebar {
+    right: 0;
+}
+
+
+.menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+.menu-item {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.menu-link {
+    font-weight: 300;
+    font-size: 1.8rem;
+    color: #777;
+    position: relative;
+}
+
+.menu-link::before {
+    content: attr(data-content);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #a7a7a7;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: width 0.3s ease-in-out;
+}
+
+.menu-link:hover:before {
+    width: 100%;
+}
+
+.social-media {
+    position: absolute;
+    bottom: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.social-media i {
+    font-size: 2.2rem;
+    margin: 3rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: #a7a7a7;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: background-color 3s;
+}
+
+.social-media i:hover {
+    background-color: #27221f;
+
+}
+
+
+
+/* Sidebar End*/
+
+/* Header */
+.header {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    perspective: 100rem;
+    overflow: hidden;
+}
+
+.img-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    animation: scale 25s;
+
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1.3);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+/* Banner */
+.banner {
+    width: 100%;
+    position: absolute;
+    top: 15%;
+    left: 0%;
+    text-align: center;
+}
+
+.banner h1 {
+    font-size: 3.8rem;
+    text-transform: uppercase;
+    font-family: "Russo One";
+    font-weight: 400;
+    -webkit-text-fill-color: transparent;
+    background: url(/images/abstract-luxury-blur-grey-color-gradient-used-as-background-studio-wall-for-display-your-products.jpg) no-repeat;
+    -webkit-background-clip: text;
+    letter-spacing: .2rem;
+    /* text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4); */
+    margin-top: 2rem;
+    opacity: 0;
+    animation: moveBanner 1s 0.6s forwards;
+
+}
+
+.banner h2 {
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: #777;
+
+    letter-spacing: 0.1rem;
+    /* text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4); */
+    opacity: 0;
+    animation: moveBanner 1s 0.7s forwards;
+    margin-top: 1rem;
+}
+
+.banner h3 {
+    font-family: "Pacifico";
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: red;
+
+    letter-spacing: 0.1rem;
+
+    /* text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4); */
+    opacity: 0;
+    animation: moveBanner 1s 0.5s forwards;
+}
+
+.banner-image-container {
+    width: 100%;
+    opacity: 0;
+    animation: moveBanner 1s 0.8s forwards;
+    /* filter: brightness(86%); */
+    margin-top: 2rem;
+}
+
+.banner-image-container img {
+    width: 20%;
+    /* height: 35%; */
+
+
+}
+
+.banner button {
+    width: 30%;
+    height: 6rem;
+    background: rgb(252, 246, 186);
+    background: radial-gradient(circle, rgba(252, 246, 186, 1) 22%, rgba(191, 149, 63, 1) 67%);
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: rgba(191, 149, 63, 1);
+    text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    opacity: 0;
+    animation: moveBanner 1s 0.9s forwards;
+    margin-top: -100rem;
+}
+
+.banner button:hover {
+    /* transform: rotate(-2deg); */
+    box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.5);
+}
+
+@keyframes moveBanner {
+    0% {
+        transform: translateY(40rem) rotateY(-20deg);
+    }
+
+    100% {
+        tranform: translateY(0) rotateY(0);
+        opacity: 1;
+    }
+
+}
+
+/* Banner End*/
+
+/* Header End */
+
+/* Media */
+
+/* Smartphones (вертикальная и горизонтальная ориентация) ----------- */
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+    .banner-image-container img {
+        width: 60%;
+
+    }
+
+    .menu-link {
+        font-weight: 300;
+        font-size: 2.6rem;
+
+    }
+
+    .banner button {
+        width: 50%;
+        height: 8rem;
+        font-size: 2.6rem;
+    }
+
+    .banner h1 {
+        font-size: 3.6rem;
+        letter-spacing: .2rem;
+        margin-top: 2rem;
+    }
+
+    .banner h2 {
+        font-size: 2.4rem;
+    }
+
+    .banner h3 {
+
+        font-size: 2.6rem;
+    }
+
+    .banner button {
+        width: 80%;
+        height: 6rem;
+    }
+}
+
+/* Smartphones (горизонтальная) ----------- */
+@media only screen and (min-width: 321px) {
+    /* стили */
+}
+
+/* Smartphones (вертикальная) ----------- */
+@media only screen and (max-width: 320px) {
+    /* стили */
+}
+
+/* iPads (вертикальная и горизонтальная) ----------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    /* стили */
+}
+
+/* iPads (горизонтальная) ----------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .banner-image-container img {
+        width: 30%;
+
+    }
+
+    .menu-link {
+        font-weight: 300;
+        font-size: 2.1rem;
+
+    }
+
+    .change .hamburger-menu {
+        right: 80rem;
+    }
+}
+
+/* iPads (вертикальная) ----------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .banner-image-container img {
+        width: 50%;
+
+    }
+
+    .menu-link {
+        font-weight: 300;
+        font-size: 2.6rem;
+
+    }
+
+    .banner button {
+        width: 50%;
+        height: 8rem;
+        font-size: 2.6rem;
+    }
+
+    .banner h1 {
+        font-size: 4.4rem;
+        letter-spacing: .2rem;
+        margin-top: 2rem;
+    }
+
+    .banner h2 {
+        font-size: 2.8rem;
+    }
+
+    .banner h3 {
+
+        font-size: 2.8rem;
+    }
+}
+
+/* iPad 3**********/
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    /* стили */
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    /* стили */
+}
+
+/* Настольные компьютеры и ноутбуки ----------- */
+@media only screen and (min-width: 1224px) {
+    .menu-link {
+        font-weight: 400;
+        font-size: 2.1rem;
+
+    }
+
+    .change .hamburger-menu {
+        right: 29rem;
+    }
+}
+
+/* Большие экраны ----------- */
+@media only screen and (min-width: 1824px) {
+    .banner h1 {
+        font-size: 4.2rem;
+        letter-spacing: .2rem;
+        margin-top: 2rem;
+    }
+
+    .banner h2 {
+        font-size: 2.8rem;
+    }
+
+    .banner h3 {
+
+        font-size: 2.6rem;
+    }
+
+    .banner-image-container {
+
+        /* filter: brightness(86%); */
+        margin-top: 2rem;
+    }
+
+    .banner-image-container img {
+        width: 25%;
+        /* height: 35%; */
+        /* border-radius: 50%; */
+
+    }
+
+    .banner button {
+        width: 30%;
+        height: 8rem;
+    }
+
+    .menu-item {
+
+        margin-bottom: 2.5rem;
+        font-weight: 400;
+
+    }
+
+    .menu-link {
+        font-weight: 400;
+        font-size: 3.8rem;
+
+    }
+}
+
+/* iPhone 4 ----------- */
+@media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    /* стили */
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    /* стили */
+}
+
+/* iPhone 5 ----------- */
+@media only screen and (min-width: 320px) and (max-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+    .sidebar {
+        width: 100%;
+        right: -100%;
+    }
+
+    .menu-link {
+        font-weight: 400;
+        font-size: 1.2rem;
+
+    }
+
+    .change .hamburger-menu {
+        right: 50rem;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+    .banner-image-container img {
+        width: 60%;
+
+    }
+
+    .banner button {
+        width: 80%;
+        height: 6rem;
+        font-size: 1.6rem;
+    }
+
+    .banner h1 {
+        font-size: 2.6rem;
+        letter-spacing: .2rem;
+        margin-top: 2rem;
+    }
+
+    .banner h2 {
+        font-size: 2.2rem;
+    }
+
+    .banner h3 {
+
+        font-size: 2rem;
+    }
+
+    .sidebar {
+        width: 100%;
+        right: -100%;
+    }
+
+    .change .hamburger-menu {
+        right: 25rem;
+    }
+
+    .menu-link {
+        font-weight: 400;
+        font-size: 1.5rem;
+
+    }
+}
+
+/* iPhone 6 ----------- */
+@media only screen and (min-width: 375px) and (max-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+    .change .hamburger-menu {
+        right: 60rem;
+    }
+}
+
+@media only screen and (min-width: 375px) and (max-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+    .change .hamburger-menu {
+        right: 29rem;
+    }
+
+    .banner button {
+        width: 70%;
+        height: 6rem;
+        font-size: 2.2rem;
+        /* margin-top: 2rem; */
+    }
+
+    .banner h1 {
+        font-size: 3.2rem;
+        letter-spacing: .2rem;
+        margin-top: 2rem;
+    }
+
+    .banner h2 {
+        font-size: 1.9rem;
+    }
+
+    .banner h3 {
+
+        font-size: 2.4rem;
+    }
+
+    .banner-image-container img {
+        width: 60%;
+
+    }
+
+}
+
+/* iPhone 6+ ----------- */
+@media only screen and (min-width: 414px) and (max-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+    /* стили */
+}
+
+@media only screen and (min-width: 414px) and (max-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+    /* стили */
+}
+
+/* Samsung Galaxy S3 ----------- */
+@media only screen and (min-width: 320px) and (max-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+    /* стили */
+}
+
+@media only screen and (min-width: 320px) and (max-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+    /* стили */
+}
+
+/* Samsung Galaxy S4 ----------- */
+@media only screen and (min-width: 320px) and (max-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+    /* стили */
+}
+
+@media only screen and (min-width: 320px) and (max-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+    /* стили */
+}
+
+/* Samsung Galaxy S5 ----------- */
+@media only screen and (min-width: 360px) and (max-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+    .banner-image-container img {
+        display: none;
+
+    }
+
+    .menu-link {
+        font-weight: 300;
+        font-size: 1.6rem;
+
+    }
+
+    .banner button {
+        width: 70%;
+        height: 6rem;
+        font-size: 2.2rem;
+        margin-top: 2rem;
+    }
+
+    .banner h1 {
+        font-size: 3.2rem;
+        letter-spacing: .2rem;
+        margin-top: 2rem;
+    }
+
+    .banner h2 {
+        font-size: 2.2rem;
+    }
+
+    .banner h3 {
+
+        font-size: 2.4rem;
+    }
+
+    .sidebar {
+        width: 100%;
+        right: -100%;
+    }
+
+    .change .hamburger-menu {
+        right: 55rem;
+    }
+
+    .social-media {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 360px) and (max-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+    .banner-image-container img {
+        width: 60%;
+
+    }
+
+    .menu-link {
+        font-weight: 300;
+        font-size: 1.8rem;
+
+    }
+
+    .banner button {
+        width: 80%;
+        height: 6rem;
+        font-size: 2.2rem;
+    }
+
+    .banner h1 {
+        font-size: 3.2rem;
+        letter-spacing: .2rem;
+        margin-top: 2rem;
+    }
+
+    .banner h2 {
+        font-size: 2.2rem;
+    }
+
+    .banner h3 {
+
+        font-size: 2.4rem;
+    }
+
+    .sidebar {
+        width: 100%;
+        right: -100%;
+    }
+
+    .change .hamburger-menu {
+        right: 29rem;
+    }
+}
+
+
+
+/* Media End */
