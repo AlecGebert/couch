@@ -141,10 +141,10 @@ html {
     font-weight: 300;
     font-size: 1.8rem;
     color: #777;
-    position: relative;
+    /* position: relative; */
 }
 
-.menu-link::before {
+/* .menu-link::before {
     content: attr(data-content);
     position: absolute;
     top: 0;
@@ -154,7 +154,7 @@ html {
     overflow: hidden;
     white-space: nowrap;
     transition: width 0.3s ease-in-out;
-}
+} */
 
 .menu-link:hover:before {
     width: 100%;
@@ -333,6 +333,60 @@ html {
 /* Banner End*/
 
 /* Header End */
+
+/* Accordion */
+.accordion-container {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 1.5rem;
+}
+
+.accordion {
+    width: 100%;
+    height: max-content;
+    border: 0;
+    text-align: center;
+    background: none;
+    outline-width: 0;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+    font-weight: 100;
+    font-size: 2.2rem;
+    color: #777;
+}
+
+.accordion::after {
+    content: "+";
+    float: right;
+    font-size: 2.2rem;
+    font-weight: 100;
+    color: #777;
+    padding-right: 2rem;
+    cursor: pointer;
+
+}
+
+.active:after {
+    content: "−";
+}
+
+.desc {
+    margin: 0;
+    padding-top: 0;
+    max-height: 0;
+    overflow: hidden;
+    text-align: center;
+    transition: all 0.3s ease-in;
+
+}
+
+.desc a {
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #777;
+}
+
+/* Accordion End */
 
 /* Media */
 
@@ -664,6 +718,11 @@ html {
         font-weight: 300;
         font-size: 1.6rem;
 
+    }
+
+    .accordion {
+        font-weight: 100;
+        font-size: 1.6rem;
     }
 
     .banner button {
