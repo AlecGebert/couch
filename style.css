@@ -133,7 +133,7 @@ html {
 }
 
 .menu-item {
-    text-align: center;
+    text-align: left;
     margin-bottom: 1.5rem;
 }
 
@@ -187,7 +187,9 @@ html {
 
 }
 
-
+.footer-media-link i {
+    margin-right: 1rem;
+}
 
 /* Sidebar End*/
 
@@ -266,10 +268,10 @@ html {
 }
 
 .banner h3 {
-    font-family: "Pacifico";
+    /* font-family: "Pacifico"; */
     font-size: 2.2rem;
     font-weight: 400;
-    color: red;
+    color: #777;
 
     letter-spacing: 0.1rem;
 
@@ -338,28 +340,29 @@ html {
 .accordion-container {
     width: 100%;
     margin: auto;
-    margin-bottom: 1.5rem;
+
 }
 
 .accordion {
     width: 100%;
     height: max-content;
     border: 0;
-    text-align: center;
+    text-align: left;
     background: none;
     outline-width: 0;
     cursor: pointer;
     transition: all 0.3s ease-in;
-    font-weight: 100;
-    font-size: 2.2rem;
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-size: 1.8rem;
     color: #777;
 }
 
 .accordion::after {
     content: "+";
     float: right;
-    font-size: 2.2rem;
-    font-weight: 100;
+    font-size: 1.8rem;
+    font-weight: 400;
     color: #777;
     padding-right: 2rem;
     cursor: pointer;
@@ -387,6 +390,155 @@ html {
 }
 
 /* Accordion End */
+/* Footer */
+.footer {
+    width: 100%;
+    background: rgb(230, 235, 234);
+    background: radial-gradient(circle, rgba(230, 235, 234, 1) 0%, rgba(218, 227, 231, 1) 41%);
+    margin-top: 5rem;
+}
+
+.footer-content {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-image-container {
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
+    margin-top: 5rem;
+}
+
+.footer-image-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.footer-content h2 {
+    font-weight: 300;
+    font-size: 4rem;
+    color: #777;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.footer-content p {
+    font-weight: 300;
+    font-size: 2rem;
+    color: #777;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.footer-buttons {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5rem;
+}
+
+.footer-media-link {
+    width: fit-content;
+    background: rgb(252, 246, 186);
+    background: radial-gradient(circle, rgba(252, 246, 186, 1) 15%, rgba(191, 149, 63, 1) 85%);
+    font-weight: 400;
+    font-size: 2rem;
+    padding: 2rem 4rem;
+    border-radius: 1rem;
+    color: rgba(191, 149, 63, 1);
+    text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.4);
+}
+
+.footer-rights {
+    font-weight: 100;
+    font-size: 1.6rem;
+    color: #777;
+    text-align: center;
+    margin: 5rem 0 5rem;
+}
+
+/* Footer End */
+
+.coaching {
+    width: 100%;
+    background: #fff;
+}
+
+/* Coaching section */
+.coaching-content {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.coaching-content a {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.coaching-items {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5rem;
+}
+
+.couch-item {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background: rgb(230, 235, 234);
+    background: radial-gradient(circle, rgba(230, 235, 234, 1) 0%, rgba(218, 227, 231, 1) 41%);
+    padding: 3rem;
+    border-radius: 2rem;
+    z-index: 100;
+}
+
+.couch-item h3 {
+    font-weight: 600;
+    font-size: 2.2rem;
+    color: #777;
+    margin-top: 2rem;
+}
+
+.couch-item p {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    color: #777;
+    margin-top: 2rem;
+    text-align: justify;
+}
+
+.couch-item i {
+    font-size: 4rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    color: rgba(191, 149, 63, 1);
+    color: radial-gradient(circle, rgba(252, 246, 186, 1) 15%, rgba(191, 149, 63, 1) 85%);
+}
+
+.section-title {
+    font-weight: 300;
+    font-size: 3.6rem;
+    color: #777;
+    margin-top: 2rem;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+
+/* Coaching section End */
 
 /* Media */
 
@@ -410,23 +562,73 @@ html {
     }
 
     .banner h1 {
-        font-size: 3.6rem;
+        font-size: 3.2rem;
         letter-spacing: .2rem;
         margin-top: 2rem;
     }
 
     .banner h2 {
-        font-size: 2.4rem;
+        font-size: 2.2rem;
     }
 
     .banner h3 {
 
-        font-size: 2.6rem;
+        font-size: 2.4rem;
     }
 
     .banner button {
         width: 80%;
         height: 6rem;
+    }
+
+    .footer-buttons {
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-around;
+
+    }
+
+    .footer-media-link {
+        width: 100%;
+    }
+
+    .footer-media-link:nth-child(2) {
+        margin-top: 2rem;
+    }
+
+    .footer-image-container {
+        width: 27rem;
+        height: 27rem;
+    }
+
+    .footer-content h2 {
+        font-size: 3.2rem;
+        line-height: 3.6rem;
+    }
+
+    .footer-content p {
+        font-size: 1.6rem;
+    }
+
+    .coaching-content {
+        width: 90%;
+    }
+
+    .coaching-items {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-top: 5rem;
+    }
+
+    .couch-item {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .section-title {
+        font-size: 2.8rem;
     }
 }
 
@@ -496,7 +698,22 @@ html {
 
         font-size: 2.8rem;
     }
+
+    .footer-buttons {
+        width: 90%;
+
+    }
+
+    .coaching-content {
+        width: 90%;
+    }
+
+    .couch-item {
+        width: 31%;
+    }
 }
+
+
 
 /* iPad 3**********/
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
