@@ -299,12 +299,13 @@ html {
     width: 30%;
     height: 6rem;
     background: rgb(252, 246, 186);
-    background: radial-gradient(circle, rgba(252, 246, 186, 1) 22%, rgba(191, 149, 63, 1) 67%);
+    background: radial-gradient(circle, rgba(252, 246, 186, 1) 15%, rgba(191, 149, 63, 1) 85%);
     border: none;
     border-radius: 0.5rem;
     font-weight: 500;
     font-size: 2.8rem;
     text-transform: uppercase;
+    text-align: center;
     letter-spacing: 0.2rem;
     color: rgba(191, 149, 63, 1);
     text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
@@ -454,6 +455,7 @@ html {
     color: rgba(191, 149, 63, 1);
     text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
     box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.4);
+    text-align: center;
 }
 
 .footer-rights {
@@ -482,7 +484,6 @@ html {
 
 .coaching-content a {
     margin-top: 3rem;
-    text-align: center;
 }
 
 .coaching-items {
