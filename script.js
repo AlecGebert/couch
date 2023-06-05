@@ -30,3 +30,29 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 // Accordion End
+
+// Slider
+let sliderTwo = tns({
+  container: ".my-slider-2",
+  slideBy: 1,
+  speed: 400,
+  autoplay: true,
+  autoplayButtonOutput: false,
+  nav: false,
+  controlsContainer: "#controls-2",
+  prevButton: ".previous-2",
+  nextButton: ".next-2",
+  responsive: {
+    1440: {
+      items: 3,
+      gutter: 20,
+    },
+    768: {
+      items: 2,
+      gutter: 20,
+    },
+    480: {
+      items: 1,
+    },
+  },
+});
