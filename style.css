@@ -455,6 +455,8 @@ html {
     margin-top: 3rem;
 }
 
+
+
 .couch-item {
     width: 30%;
     display: flex;
@@ -465,6 +467,43 @@ html {
     padding: 3rem;
     border-radius: 2rem;
     z-index: 100;
+
+}
+
+.couch-item:nth-child(1).move {
+    animation: moveItems 1s 0.5s forwards;
+}
+
+.couch-item:nth-child(2).move {
+    animation: moveItems 1s 0.6s forwards;
+}
+
+.couch-item:nth-child(3).move {
+    animation: moveItems 1s 0.7s forwards;
+}
+
+.couch-item:nth-child(4).move {
+    animation: moveItems 1s 0.5s forwards;
+}
+
+.couch-item:nth-child(5).move {
+    animation: moveItems 1s 0.6s forwards;
+}
+
+.couch-item:nth-child(6).move {
+    animation: moveItems 1s 0.7s forwards;
+}
+
+.couch-item:nth-child(7).move {
+    animation: moveItems 1s 0.8s forwards;
+}
+
+.couch-item:nth-child(8).move {
+    animation: moveItems 1s 0.9s forwards;
+}
+
+.couch-item:nth-child(9).move {
+    animation: moveItems 1s 1s forwards;
 }
 
 .couch-item h3 {
@@ -498,6 +537,30 @@ html {
     margin-top: 2rem;
     text-align: justify;
     margin-top: 5rem;
+}
+
+@keyframes moveItems {
+    0% {
+        transform: translateX(40rem) rotateX(-20deg);
+    }
+
+    100% {
+        tranform: translateX(0) rotateX(0);
+        opacity: 1;
+    }
+
+}
+
+@keyframes moveItemsleft {
+    0% {
+        transform: translateX(-40rem) rotateX(20deg);
+    }
+
+    100% {
+        tranform: translateX(0) rotateX(0);
+        opacity: 1;
+    }
+
 }
 
 /* Coaching section End */
@@ -675,6 +738,7 @@ html {
     /* display: flex;
     flex-direction: column;
     align-items: center; */
+    border-radius: 1rem;
 }
 
 .check-list-content {
@@ -763,11 +827,19 @@ html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.2;
+    opacity: 0.4;
     top: 0px;
     right: 0px;
     bottom: 0px;
     left: 0px;
+}
+
+.teaser-about::before {
+    background: url(./images/teaser.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5;
 }
 
 .teaser-content {
@@ -888,6 +960,18 @@ html {
     .couch-item {
         width: 100%;
         margin-bottom: 2rem;
+    }
+
+    .couch-item:nth-child(2).move {
+        animation: moveItemsleft 1s 0.6s forwards;
+    }
+
+    .couch-item:nth-child(5).move {
+        animation: moveItemsleft 1s 0.6s forwards;
+    }
+
+    .couch-item:nth-child(8).move {
+        animation: moveItemsleft 1s 0.6s forwards;
     }
 
     .section-title {
