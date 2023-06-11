@@ -467,7 +467,7 @@ html {
     padding: 3rem;
     border-radius: 2rem;
     z-index: 100;
-
+    opacity: 0;
 }
 
 .couch-item:nth-child(1).move {
