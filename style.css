@@ -543,7 +543,7 @@ html {
     font-size: 3.6rem;
     color: #777;
     margin-top: 2rem;
-    text-align: justify;
+    text-align: center;
     margin-top: 5rem;
 }
 
@@ -590,6 +590,7 @@ html {
     font-size: 1.8rem;
     margin-top: 2rem;
     color: #777;
+    text-align: center;
 }
 
 /* Testimonials End*/
@@ -871,8 +872,8 @@ html {
 /* Teaser End*/
 /* about-for */
 .about-for {
-    background: rgb(230, 235, 234);
-    background: radial-gradient(circle, rgba(230, 235, 234, 1) 0%, rgba(218, 227, 231, 1) 41%);
+    /* background: rgb(230, 235, 234);
+    background: radial-gradient(circle, rgba(230, 235, 234, 1) 0%, rgba(218, 227, 231, 1) 41%); */
     padding-bottom: 5rem;
 }
 
